@@ -1,0 +1,11 @@
+[Unit]
+Description=relay server
+After=syslog.target network-online.target
+
+[Service]
+PIDFile=/var/run/relay.pid
+ExecStart=/usr/local/sbin/relay srv -config /etc/relay/relay.conf
+LimitNOFILE=1000000
+
+[Install]
+WantedBy=multi-user.target
