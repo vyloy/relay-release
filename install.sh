@@ -30,7 +30,6 @@ echo "installing service file to ${SERVICE_PATH}"
 sudo chown root:wheel ${SERVICE_PATH}
 sudo chmod 775 ${SERVICE_PATH}
 sudo curl -o "${SERVICE_FILE}" -fsSL "${DOWNLOAD_URL}/${NAME}.service"
-sudo chmod 775 ${SERVICE_FILE}
 
 echo "cat ${CONFIG_FILE}"
 echo "=================================================="
